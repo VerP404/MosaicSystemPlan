@@ -35,7 +35,7 @@ class Specialty(models.Model):
 
 
 class BranchCode(models.Model):
-    name = models.CharField(max_length=50, verbose_name='Код отделения')
+    name = models.CharField(max_length=255, verbose_name='Код отделения')
 
     def __str__(self):
         return self.name
