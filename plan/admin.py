@@ -87,3 +87,6 @@ admin.site.register(Plan, PlanAdmin)
 
 admin.site.register(PlanDoctor, PlanDoctorAdmin)
 admin.site.register(PlanRecordDoctor, PlanRecordDoctorAdmin)
+
+
+admin.site.site_header = 'МозаикаМед - Система ведения планов'

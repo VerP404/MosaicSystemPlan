@@ -12,7 +12,7 @@ class PlanType(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Тип плана'
+        verbose_name = 'тип плана'
         verbose_name_plural = 'Типы планов'
 
 
@@ -26,7 +26,7 @@ class PlanSubtype(models.Model):
         return f"{self.plan_type.name} - {self.name}"  # Возвращаем строку "Тип плана - Подтип плана"
 
     class Meta:
-        verbose_name = 'Подтип плана'
+        verbose_name = 'подтип плана'
         verbose_name_plural = 'Подтипы плана'
         unique_together = (('name', 'plan_type'),)
 
@@ -39,7 +39,7 @@ class MedicalOrganization(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Организация'
+        verbose_name = 'организация'
         verbose_name_plural = 'Организации'
 
 
@@ -52,7 +52,7 @@ class Corpus(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Корпус'
+        verbose_name = 'корпус'
         verbose_name_plural = 'Корпуса'
         unique_together = (('name', 'organization'),)
 
@@ -67,7 +67,7 @@ class Department(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = 'Отделение'
+        verbose_name = 'отделение'
         verbose_name_plural = 'Отделения'
         unique_together = (('name', 'building'),)
 
@@ -119,6 +119,6 @@ class Doctor(models.Model):
         return "Удалено"
 
     class Meta:
-        verbose_name = 'Врач'
+        verbose_name = 'врач'
         verbose_name_plural = 'Врачи'
         unique_together = (('department', 'surname', 'name', 'patronymic_name', 'structural_subdivision', 'specialty'),)

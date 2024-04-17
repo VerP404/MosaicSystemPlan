@@ -8,6 +8,7 @@ class StructuralSubdivision(models.Model):
         return self.name
 
     class Meta:
+        verbose_name = 'подразделение'
         verbose_name_plural = 'Подразделения'
 
 
@@ -18,6 +19,7 @@ class Profile(models.Model):
         return self.name
 
     class Meta:
+        verbose_name = 'профиль'
         verbose_name_plural = 'Профили'
 
 
@@ -28,6 +30,7 @@ class Specialty(models.Model):
         return self.name
 
     class Meta:
+        verbose_name = 'специальность'
         verbose_name_plural = 'Специальности'
 
 
@@ -38,4 +41,5 @@ class BranchCode(models.Model):
         return self.name
 
     class Meta:
+        verbose_name = 'отделение'
         verbose_name_plural = 'Отделения'

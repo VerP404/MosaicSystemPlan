@@ -27,7 +27,7 @@ class PlanDepartment(models.Model):
         return f'{self.department} - {self.plan_subtype}'
 
     class Meta:
-        verbose_name = 'План отделения'
+        verbose_name = 'план отделения'
         verbose_name_plural = 'Планы отделений'
 
 
@@ -42,7 +42,7 @@ class Plan(models.Model):
         return self.month
 
     class Meta:
-        verbose_name = 'Месячный план отделения'
+        verbose_name = 'месячный план отделения'
         verbose_name_plural = 'Месячные планы отделений'
 
 
@@ -57,7 +57,7 @@ class PlanDoctor(models.Model):
         return f'{self.doctor} - {self.department} - {self.plan_subtype}'
 
     class Meta:
-        verbose_name = 'План врача'
+        verbose_name = 'план врача '
         verbose_name_plural = 'Планы врачей'
 
 
@@ -72,5 +72,5 @@ class PlanRecordDoctor(models.Model):
         return self.month
 
     class Meta:
-        verbose_name = 'Месячный план врача'
+        verbose_name = 'месячный план врача'
         verbose_name_plural = 'Месячные планы врачей'

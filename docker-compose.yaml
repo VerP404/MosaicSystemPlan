@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  postgres_mosaic_plan:
+    image: postgres:15-alpine
+    container_name: postgres_mosaic_plan
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5430:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+
+  mosaic_plan:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres_mosaic_plan
+    environment:
+      DEBUG: "False"
+      DB_NAME: "postgres"
+      DB_USER: "postgres"
+      DB_PASSWORD: "postgres"
+      DB_HOST: "postgres_mosaic_plan"
+      DB_PORT: 5432
+
+volumes:
+  db_data:
